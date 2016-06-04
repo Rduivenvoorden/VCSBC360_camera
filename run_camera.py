@@ -50,6 +50,9 @@ tn.write("\r\n")
 #tn.write("\r\n")
 #print tn.read_until("$")
 
+# set exposure (shutter speed) in microseconds, minimum 34 max 2000000
+tn.write("sh 600\n");
+
 # start live video mode
 tn.write("vd -l\n")
 print tn.read_until("live", telnet_timeout)
